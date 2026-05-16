@@ -74,6 +74,7 @@ description: Write or refactor public README per standard-readme spec + GitHub 1
 ## 写作微观规范
 
 - 中文 README 用中文正文，技术名词 / 标识符保留英文（不翻译稳定的英文术语为意译中文）
+- 禁止在同一个 README 文件中混写中英文正文：中文放 `README.md`，英文放 `README_EN.md`，同文件只允许语言切换链接与少量不可翻译标识符（如命令、路径、代码符号）
 - 现在时陈述：❌"我们决定采用 X" → ✅"采用 X"
 - 段落 ≤ 3 行；超过改表格 / 列表 / mermaid
 - 链接必须可点：相对路径用 `./docs/xxx.md`；外链带 `https://`；**提交前批量点验**
@@ -92,6 +93,7 @@ description: Write or refactor public README per standard-readme spec + GitHub 1
 
 ### 根 README 专属
 - [ ] 中文版改了，英文版同步了吗？
+- [ ] `README.md` 是否仅中文正文、`README_EN.md` 是否仅英文正文（无同文件中英混写）？
 - [ ] 架构图与当前 `docker-compose.prod.yml` 服务清单一致？
 
 ### 子 README 专属
