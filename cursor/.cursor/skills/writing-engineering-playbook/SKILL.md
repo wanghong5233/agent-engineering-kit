@@ -1,6 +1,6 @@
 ---
 name: writing-engineering-playbook
-description: Write or refactor cross-project engineering playbook (Agent/LLM + backend; source in `docs/private/engineering-playbook/`, publish to 飞书/blog NOT GitHub). Use when user asks to 写/沉淀/提炼 工程经验/Agent 经验/playbook/第一性原理/跨项目复用/技术博客. Do NOT use for project pitfalls.
+description: Write or refactor cross-project engineering playbook (Agent/LLM + backend; source in `docs/private/engineering-playbook/`, publish to 飞书/blog NOT GitHub). Use when user asks 写/沉淀/提炼 工程经验/Agent 经验/playbook/第一性原理/跨项目复用/技术博客/去AI味/AI痕迹. Do NOT use for project pitfalls.
 ---
 
 # Writing Engineering Playbook
@@ -42,6 +42,9 @@ description: Write or refactor cross-project engineering playbook (Agent/LLM + b
 | 教程化 | "首先 / 第二步 / 第三步" | 改 mermaid 或伪代码骨架 |
 | 引用未公开内部链接 | 链 `private/` 或公司内 wiki | 删；外链必须可公开访问 |
 | 时效语言 | "在 2026 年 / 最新版 X / 当前流行" | 改无时效表述 |
+| AI 标题 | "深度解析 / 终极指南 / 核心理念 / 一文搞懂" | 改成工程判断或反模式名 |
+| 空泛抽象 | "提升稳定性 / 增强可维护性" | 改成触发信号、失败后果、检查项 |
+| 完美三段式 | 每节都同长度、同节奏 | 按信息密度重排 |
 
 设计依据见 `references/design-rationale.md`。
 
@@ -71,6 +74,9 @@ description: Write or refactor cross-project engineering playbook (Agent/LLM + b
 - 表格密度高于文字密度
 - 无 emoji、无感叹号、无形容词自夸
 - 不写时效语
+- 禁止 AI 模板句："这不是 X，而是 Y" / "值得注意的是" / "总而言之" / "更进一步"
+- 标题必须像工程笔记目录，不像营销标题
+- 每 300 字至少出现一个反例、触发信号、检查项或量化阈值
 
 ## 自检（提交前必过）
 
@@ -80,6 +86,8 @@ description: Write or refactor cross-project engineering playbook (Agent/LLM + b
 - [ ] 反模式 vs 正例表 ≥ 5 行？
 - [ ] 第一性原理表维度名是抽象语义（异质性 / 可逆性 / 故障域），还是项目术语？
 - [ ] 触发信号是可单点验证的特征，还是直觉？
+- [ ] 是否有 AI 味标题或宣言句？→ 改成反模式 / 信号 / 约束
+- [ ] 是否能删掉"提升 / 优化 / 打造 / 赋能"而不损失信息？能→删
 
 ### 开源就绪
 - [ ] 含真实 IP / hostname / API key / 内部域名？→ 删

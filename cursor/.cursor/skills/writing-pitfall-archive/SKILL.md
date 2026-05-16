@@ -1,6 +1,6 @@
 ---
 name: writing-pitfall-archive
-description: Write or refactor a pitfall archive (recurring failures → invariants; Google SRE blameless multi-incident form). Use when editing `*DEPLOYMENT*`/`*MANUAL*`/`*RUNBOOK*`/`*PITFALL*`/`*坑*`/`*手册*` under `docs/`, or user asks 沉淀 部署经验/踩坑/故障复盘/不再犯同样错误. Do NOT use for single postmortems.
+description: Write or refactor a pitfall archive (recurring failures → invariants; Google SRE blameless multi-incident form). Use when editing `*DEPLOYMENT*`/`*MANUAL*`/`*RUNBOOK*`/`*PITFALL*`/`*坑*`/`*手册*` under `docs/`, or user asks 沉淀部署经验/踩坑/故障复盘/去AI味/不再犯同样错误. Do NOT use for single postmortems.
 ---
 
 # Writing Pitfall Archive
@@ -32,6 +32,8 @@ description: Write or refactor a pitfall archive (recurring failures → invaria
 | 重复表达 | 同一不变量在 4 节复述 | 用 `§X.Y` 引用 |
 | 复制粘贴报错堆栈 | 完整 traceback 30 行 | 留关键 3 行作 Evidence |
 | 通用 SRE 知识 | "Docker 镜像分层原理 / Linux OOM 机制" | 删 |
+| AI 安慰话 | "通常来说 / 一般建议 / 值得注意的是" | 改成信号、后果、动作 |
+| 口号式不变量 | "保证系统稳定" | 改成可违反、可检测、可追责的约束 |
 
 ## 必要章节结构
 
@@ -110,6 +112,8 @@ description: Write or refactor a pitfall archive (recurring failures → invaria
 - 内部交叉引用用 `§X.Y`，不用"上文 / 前面"
 - 中文正文 + 英文代码 / 日志 / 路径
 - 编号一旦发布**永不变**（外部 `grep §4.3` 可能依赖），新增只往后追加
+- 句子以事实开头，不以评价开头：✅"CPU 95%+ 持续 30s"，❌"这是一个严重问题"
+- 禁止"总结一下 / 经验告诉我们"，直接写 Invariant
 
 ## 自检（提交前必过）
 
@@ -120,6 +124,8 @@ description: Write or refactor a pitfall archive (recurring failures → invaria
 - [ ] §1 / §4 / §6 互相引用闭环？（信号查到坑点，坑点上溯约束）
 - [ ] 编号无与历史版本冲突？（git blame 验证）
 - [ ] 含敏感信息（真实 IP / hostname / API key / 内部域名）？→ 删
+- [ ] 每个 Invariant 是否能被一次 grep、监控或 review 检查发现违反？不能→重写
+- [ ] 是否有 AI 式安全套话（"通常 / 建议 / 尽量"）？→ 改成硬约束或触发条件
 
 ## 链路
 

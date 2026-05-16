@@ -1,6 +1,6 @@
 ---
 name: writing-issue-backlog
-description: Write or refactor known-issues/backlog tracker (problem-first, evidence-before-solution). Use when editing `docs/KNOWN_ISSUES_AND_BACKLOG*.md`, or user asks to 记录 bug/补 issue/整理待办/复审 issue, or complains an entry has 拍脑袋的解法/补丁式方案/启发式/先入为主. Do NOT use for postmortems or pitfall archive.
+description: Write or refactor known-issues/backlog tracker (problem-first, evidence-before-solution). Use when editing `docs/KNOWN_ISSUES_AND_BACKLOG*.md`, or user asks 记录 bug/补 issue/整理待办/复审 issue, or complains entry has 拍脑袋解法/补丁式方案/启发式/AI味/先入为主. Do NOT use for postmortems or pitfall archive.
 ---
 
 # Writing Issue & Backlog Tracker
@@ -34,6 +34,8 @@ description: Write or refactor known-issues/backlog tracker (problem-first, evid
 | 占位语言 | "TBD / 待定 / 后续会处理" | 删，或改 `Open Question` |
 | 30+ 行日志全文 | 完整 traceback | 留关键 3 行 + 链接 |
 | 模糊量化 | "很慢 / 经常失败" | 量化：`p95 12.4s` / `30%/周` |
+| AI 式归纳 | "可能是复杂交互导致" / "需要综合优化" | 拆成可证伪假设 |
+| 空泛影响 | "影响用户体验" | 写具体损失：失败率、等待时间、阻塞场景 |
 
 详见 `references/design-rationale.md` 解释 why。
 
@@ -117,6 +119,8 @@ description: Write or refactor known-issues/backlog tracker (problem-first, evid
 - [ ] 索引表「下一步」只写当前阶段动作
 - [ ] 无已关闭 / 已上线残留
 - [ ] 单条 < 60 行
+- [ ] 是否出现"可能需要优化 / 综合治理 / 进一步完善"这类空话？→ 改成实验或 open question
+- [ ] 每个判断是否有 Evidence、Repro、指标或明确责任对象支撑？
 
 完整 checklist：`references/checklist.md`
 

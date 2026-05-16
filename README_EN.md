@@ -11,9 +11,9 @@
 
 ---
 
-## One-line Positioning
+## Project Positioning
 
-This is not a prompt dump. It is a layered `.cursor/` governance template:
+This repository provides a `.cursor/` package that can be copied into a project: rules, skills, commands, and hooks are maintained as separate layers.
 
 ```text
 Rule    = default constraints (small, stable)
@@ -22,7 +22,7 @@ Command = manual workflows (review, retro)
 Hook    = automatic safety gates (deterministic interception)
 ```
 
-First principle: **put every constraint at the lowest-cost, highest-determinism layer that can enforce it.**
+Design rule: keep each constraint in the layer that can enforce it best; if a hook can block it automatically, do not rely on model memory.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: writing-readme
-description: Write or refactor public README per standard-readme spec + GitHub 10-second rule. Use when editing `README.md`/`README_EN.md`/subfolder README, or user asks to 写/同步/修改/更新 README, or complains README has 口水话/啰嗦/内部业务字段/不像专业 GitHub 项目. Do NOT use for `docs/*.md` or internal docs.
+description: Write or refactor public README per standard-readme spec + GitHub 10-second rule. Use when editing `README.md`/`README_EN.md`/subfolder README, or user asks 写/同步/修改/更新 README, or complains README has 口水话/啰嗦/AI味/AI痕迹/中英混写/不像专业 GitHub 项目. Do NOT use for `docs/*.md`.
 ---
 
 # Writing READMEs
@@ -81,6 +81,9 @@ description: Write or refactor public README per standard-readme spec + GitHub 1
 - Badges 来自 `shields.io`，颜色不超过 3 种
 - mermaid 图节点数 ≤ 12；超过拆分图
 - 双语 README：`README.md`（中文）+ `README_EN.md`（英文）；**两份内容严格对齐**，同步更新
+- 标题使用朴素工程名词：`项目定位` / `适用场景` / `快速使用`，少用"一句话定位 / 核心理念 / 深入理解"
+- 不写宣言式对比：❌"这不是 X，而是 Y" → ✅"提供 X/Y/Z 文件，可复制到项目"
+- `第一性原理` / `工业级` / `生产级` 只在后文有具体约束、命令或指标支撑时保留，否则删
 
 ## 自检（提交前必过）
 
@@ -90,6 +93,8 @@ description: Write or refactor public README per standard-readme spec + GitHub 1
 - [ ] 相对路径都指向 git tracked 文件？（`docs/` ✅、`private/` ❌）
 - [ ] 外部链接今天还能打开？（demo / docs / 主页）
 - [ ] 形容词自夸（"强大 / 优雅 / 领先"）？→ 删
+- [ ] 出现 AI 模板句（"这不是 X，而是 Y" / "值得注意的是" / "赋能" / "打造"）？→ 改成可验证事实
+- [ ] 标题像口号还是像工程导航？像口号 → 改成用户会搜索的名词
 
 ### 根 README 专属
 - [ ] 中文版改了，英文版同步了吗？

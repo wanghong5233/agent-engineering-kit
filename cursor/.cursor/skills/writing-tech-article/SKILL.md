@@ -1,6 +1,6 @@
 ---
 name: writing-tech-article
-description: Write or refactor dense technical blog / Feishu articles for personal portfolio. Use when editing `docs/private/tech-articles/*.md`, or user asks to 写技术博客/复习笔记/面试沉淀/干货/第一性原理/高密度/减少噪声/用图表达. Do NOT use for README, issue backlog, ADR, or pitfall archive.
+description: Write or refactor dense technical blog / Feishu articles for personal portfolio. Use when editing `docs/private/tech-articles/*.md`, or user asks 写技术博客/复习笔记/面试沉淀/干货/高密度/减少噪声/去AI味/AI痕迹/用图表达. Do NOT use for README, issue backlog, ADR, or pitfall archive.
 ---
 
 # Writing Tech Articles
@@ -61,6 +61,10 @@ pipeline:        input → route → tool/retrieval → model → state → UI
 | 同一个观点用 3 种说法重复 | 留最硬的一句 |
 | 为了显得完整把边缘内容写进去 | 放进“非目标”或直接删 |
 | 用形容词代替证据 | 写数字、阈值、触发条件 |
+| AI 模板句 | 删"值得注意的是 / 此外 / 更重要的是 / 总而言之"，改成事实连接 |
+| 口号标题 | 改成判断、边界或触发条件 |
+| 空喊"第一性原理" | 补成本模型、约束表或可证伪条件；补不出就删 |
+| 完美三段式节奏 | 按信息密度重排，不为对称而对称 |
 
 ## 自检
 
@@ -69,5 +73,7 @@ pipeline:        input → route → tool/retrieval → model → state → UI
 - [ ] 每个小节是否都能被一句话标题概括？
 - [ ] 是否删掉了“懂的人不用看，不懂的人看了也不会做”的段落？
 - [ ] 关键数字是否有出处或标明是实践阈值？
+- [ ] 是否有 AI 味标题（"深度解析 / 终极指南 / 核心理念 / 一文搞懂"）？→ 改成具体问题
+- [ ] 是否每 300 字至少有一个具体例子、阈值、文件名、命令或反例？
 - [ ] 读者能否带走 3 条可复述观点？
 

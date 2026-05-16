@@ -1,6 +1,6 @@
 ---
 name: writing-architecture-docs
-description: Write or refactor architecture/design/ADR docs (current-state + first-principles form). Use when editing `docs/*设计*`/`*架构*`/`*ADR*`/`*RFC*`, or user asks to write/修改 architecture/设计/ADR docs, or complains a doc is 啰嗦/口水/对话记录/辩证过程. Do NOT use for README or pitfall.
+description: Write or refactor architecture/design/ADR docs (current-state + first-principles form). Use when editing `docs/*设计*`/`*架构*`/`*ADR*`/`*RFC*`, or user asks write/修改 architecture/设计/ADR docs, or complains doc is 啰嗦/口水/AI味/AI痕迹/对话记录/辩证过程. Do NOT use for README or pitfall.
 ---
 
 # Writing Architecture Docs
@@ -62,6 +62,9 @@ description: Write or refactor architecture/design/ADR docs (current-state + fir
 - 现在时陈述：❌"我们决定采用 X" → ✅"采用 X"
 - 禁用口语连接词：就 / 其实 / 说白了 / 可见 / 显然
 - 无感叹号、无 emoji
+- 禁止 AI 模板句："这不是 X，而是 Y" / "值得注意的是" / "从某种意义上" / "显著提升"
+- 标题写对象或契约，不写口号：✅`运行时状态机`，❌`为什么这是正确架构`
+- `第一性原理` 必须落成维度表；否则改名为 `设计约束`
 - 表格 > 列表 > 段落；段落不超过 3 行
 - 章节引用用 `§X.Y` 或 `[附录 B](#...)`，不写"上文提到过"
 
@@ -73,6 +76,8 @@ description: Write or refactor architecture/design/ADR docs (current-state + fir
 - [ ] 能用表格/图/签名代替吗？能就替
 - [ ] 删掉这行读者会漏什么架构事实？漏不掉→删
 - [ ] "为什么"是否走了第一性原理维度表？口水论证→改表
+- [ ] 标题是否像工程索引，而不是 AI 摘要标题？不是→改
+- [ ] 是否有无证据形容词（"稳定 / 高效 / 优雅"）？→ 改成指标或删
 - [ ] 出现被禁止章节了吗？命中→删
 
 ## 链路
