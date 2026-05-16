@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "command": "python .cursor/hooks/block-dangerous-shell.py",
+        "matcher": "Shell",
+        "timeout": 5,
+        "failClosed": true
+      }
+    ]
+  }
+}
